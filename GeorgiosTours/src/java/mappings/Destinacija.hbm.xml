@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 2, 2017 3:19:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="georgios_tours" name="model.Destinacija" optimistic-lock="version" table="destinacija">
+    <id name="idDestinacije" type="java.lang.Integer">
+      <column name="id_destinacije"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="model.Drzava" fetch="select" name="drzava">
+      <column name="id_drzave" not-null="true"/>
+    </many-to-one>
+    <property name="imeDestinacije" type="string">
+      <column length="256" name="ime_destinacije" not-null="true"/>
+    </property>
+    <property name="opisDestinacije" type="string">
+      <column length="512" name="opis_destinacije" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="hotels" table="hotel">
+      <key>
+        <column name="id_destinacije" not-null="true"/>
+      </key>
+      <one-to-many class="model.Hotel"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="transports" table="transport">
+      <key>
+        <column name="id_destinacije" not-null="true"/>
+      </key>
+      <one-to-many class="model.Transport"/>
+    </set>
+  </class>
+</hibernate-mapping>

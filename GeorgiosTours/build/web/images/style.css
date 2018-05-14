@@ -1,0 +1,488 @@
+/*
+        
+        Blue Island Free Template
+        by David Herreman
+        http://www.free-css-templates.com
+
+*/
+
+
+textarea.text { 
+    height: 150px; 
+    width: 90%; 
+    border: 1px solid #ccc; 
+    background: #fff; 
+    color: #000;
+}
+
+textarea.text:hover { 
+    border: 1px solid #eee; 
+    background: #FFFFF4; 
+    color: #000;
+}
+
+input.field { 
+    border: 1px solid #ccc; 
+    background-color: #FFFFFF; 
+    width: 200px; 
+    color: #000;
+}
+
+input.field:hover { 
+    border: 1px solid #eee; 
+    background: #FFFFF4; 
+    color: #000;
+}
+
+input.text { 
+    margin: 0; 
+    width: 110px;
+    border: 1px solid #eee; 
+    background: #FFF;
+    color: #000; 
+}
+
+input.text:hover { 
+    border: 1px solid #ccc; 
+}
+
+input.searchbutton { 
+    margin: 0; 
+    font-size: 100%; 
+    font-family: Arial, Sans-serif; 
+    border: none; 
+    background: #FFFFFF; 
+    color: #808080; 
+    padding: 1px; 
+    font-weight: bold; 
+}
+
+input.button { 
+    background: #FFFFF4; 
+    color: #808080;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+h4 {
+    font-size: 12px;
+    color: #50922C;
+    text-align: left;
+}
+
+.date {
+    text-align: right;
+    color: #808080;
+    font-size: 11px;
+    background-color: #cad9de;
+}
+
+.date a {
+    color: #003647;
+    background-color: #cad9de;
+}
+
+
+
+#page-container {
+    width: 1030px;
+    margin: auto;
+    background-color: #fff;
+}
+
+body {
+    font-family: Arial, Helvetica, Verdana, Sans-serif;
+    font-size: 22px;
+    color: #003647;
+    background:url("texture.jpg") repeat; 
+    text-align: center;
+
+}
+
+
+#header {
+    background: #cad9de url("header.jpg") no-repeat;
+    height: 212px;
+    padding: 0 0 0 0px;
+    text-align: right;
+    color: #fff;
+    font-size: 10px;
+    background-color: #cad9de;
+    height: 250px;
+}
+
+#header a {
+    color: #000;
+}
+
+#header .text {
+    text-align: right;
+    color: #003647;
+    font-size: 12px;
+    padding: 25px 25px 10px 0px;
+    font-weight: bold;
+}
+
+* html #header .text {
+    text-align: right;
+    color: #003647;
+    font-size: 12px;
+    padding: 25px 0px 0px 0px;
+    font-weight: bold;
+}
+
+#header input.button { 
+    float: right;
+    background: #003647; 
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background: #003647; 
+
+}
+
+
+#header .padding {
+    padding: 80px 25px 0px 0px;
+}
+
+#header .padding_passwd {
+    padding: 20px 25px 0px 0px;
+}
+
+* html #header .padding {
+    padding: 80px 17px 0px 0px;
+}
+
+* html #header .padding_passwd {
+    padding: 17px 17px 0px 0px;
+}
+
+#header input.text { 
+    width: 109px; 
+    height:24px;
+    border: 0;
+    background: url(input2.gif) no-repeat;
+    padding: 4px;
+    color: #003647;
+}
+
+* html #header input.text { 
+    width: 109px; 
+    height:24px;
+    border: 0;
+    background: url(input2.gif) no-repeat;
+    padding-right: 10px; 
+    color: #003647;
+}
+
+
+#menu {
+    height: 87px;
+    text-align: center;
+    color: #47bbed;
+    font-size: 10px;
+    font-size: 100%; 
+    padding-top: 7px;
+}
+
+
+#menu .padding {
+    padding-top: 0px;
+}
+
+* html #menu .padding {
+    padding-top: 5px;
+}
+
+* html #menu {
+    background: #cad9de url("menu.jpg") top center no-repeat;
+    height: 87px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    font-size: 100%; 
+    padding: 0px;
+}
+
+#menu a {
+    color: #47b5e7;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#menu a:hover {
+    color: #003647;
+    text-decoration: none;
+
+}
+
+
+#menu input.button { 
+    background: #003647; 
+    border: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+* html #menu input.button { 
+    background: #003647; 
+    border: none;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.search { 
+    color: #fff;
+    clear: both;
+    font-weight: bold;
+    padding: 10px 25px 10px 10px;
+    margin: 5px 0;
+}
+
+* html .search { 
+    color: #fff;
+    clear: both;
+    font-weight: bold;
+    padding: 0px 0px 00px 0px;
+    margin: 0px 0;
+}
+
+#menu input.text { 
+    width: 292px; 
+    border: 0;
+    background: #FFF url(input.gif) no-repeat;
+    margin-top: 4px;
+    padding: 4px; 
+    color: #003647;
+}
+
+* html #menu input.text { 
+    border: 0px;
+    background: url(input.gif) no-repeat;
+    margin-top: 0px;
+    padding: 4px; 
+    color: #003647;
+}
+
+#myhr {
+    background: url(hr.gif) no-repeat center;
+    margin: 13px;
+    height: 1px;
+    background-color: #eee;
+}
+
+
+#content {
+    padding-top: 0px;
+    line-height: 14px;
+    padding-left: 10px;
+}
+
+#content .padding {
+    padding: 10px 10px 0px 10px;
+    color: #000;
+    background-color: #cad9de;
+}
+
+
+#content h2 {
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    color: #003647;
+    line-height: 30px;
+    /*! background-color: #cad9de; */
+}
+
+
+* html #content h2 {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: #003647;
+    line-height: 30px;
+    background-color: #cad9de;
+}
+
+#content a {
+    color: #003647;
+    text-decoration: none;
+    /*! background-color: #cad9de; */
+}
+
+#content p {
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    background-color: #cad9de;
+}
+
+#box {
+    width: auto;
+    line-height: 18px;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #eee;
+    border: 1px;
+    border-style: solid;
+    border-color: #003647;
+}
+
+#sidebar-a {
+    float: right;
+    width: 195px;
+    line-height: 18px;
+    margin-top: 30px;
+    margin-right: 20px;
+    background-color: #eee;
+}
+
+* html #sidebar-a {
+    float: right;
+    width: 95px;
+    line-height: 18px;
+    margin-top: 30px;
+    margin-right: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #eee;
+}
+
+
+
+* html #sidebar-a p {
+    width: 173px;
+    margin-left: 10px;
+    margin-top: 15px;
+    text-decoration: none ;
+    text-align: left;
+    background-color: #eee;
+}
+
+
+
+#footer {
+    clear:both;
+    font-family: Tahoma, Arial, Helvetica, Sans-serif;
+    font-size: 11px;
+    color: #fff;
+    padding: 4px 0px;
+    text-align: center;
+    background-color: #003647;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #fff;
+}
+
+#footer #copyright {
+    padding-top: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+.roundcont {
+    width: 195px;
+    background-color: #eee;
+    color: #808080;
+}
+
+.roundcont {
+    width: 195px;
+    background-color: #eee;
+    color: #808080;
+    padding:0px;
+}
+
+
+.roundcont p {
+    margin: 25px 10px;
+}
+
+.roundtop { 
+    background: url(topright.gif) no-repeat top right; 
+}
+
+.roundbottom {
+    background: url(botright.gif) no-repeat top right; 
+}
+
+img.corner {
+    width: 18px;
+    height: 17px;
+    border: none;
+    display: block !important;
+}
+
+.img-size{
+    width: 297px;
+    height: 140px;
+    padding: 10px;
+}
+.img-position{
+    float:left;
+}
+
+.img-header{
+    width:  100%;
+    height: 100%;
+}
+
+.omot {
+    padding: 20px;
+    height: auto;
+}
+
+input[type=text], input[type=password] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 250px;
+    height: 37px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:8px 25px; 
+    background:#65c7ee; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 25px; 
+    box-shadow: 9px 6px 12px #888888;
+    color: #003647;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.hotel{
+    float:left;
+    margin-left: 195px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#map{
+    float:left;
+}
+#kontakt{
+    float:right;
+}

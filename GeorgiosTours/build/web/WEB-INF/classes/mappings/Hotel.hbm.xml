@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 2, 2017 3:19:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="georgios_tours" name="model.Hotel" optimistic-lock="version" table="hotel">
+    <id name="idHotela" type="java.lang.Integer">
+      <column name="id_hotela"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="model.Destinacija" fetch="select" name="destinacija">
+      <column name="id_destinacije" not-null="true"/>
+    </many-to-one>
+    <property name="imeHotela" type="string">
+      <column length="256" name="ime_hotela" not-null="true"/>
+    </property>
+    <property name="zvezdice" type="int">
+      <column name="zvezdice" not-null="true"/>
+    </property>
+    <property name="opisHotela" type="string">
+      <column length="512" name="opis_hotela" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="cenaSobes" table="cena_sobe">
+      <key>
+        <column name="id_hotela" not-null="true"/>
+      </key>
+      <one-to-many class="model.CenaSobe"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="slikas" table="slika">
+      <key>
+        <column name="id_hotela" not-null="true"/>
+      </key>
+      <one-to-many class="model.Slika"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="sobas" table="soba">
+      <key>
+        <column name="id_hotela" not-null="true"/>
+      </key>
+      <one-to-many class="model.Soba"/>
+    </set>
+  </class>
+</hibernate-mapping>

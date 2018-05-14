@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 2, 2017 3:19:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="georgios_tours" name="model.Transport" optimistic-lock="version" table="transport">
+    <composite-id class="model.TransportId" name="id">
+      <key-property name="idDestinacije" type="int">
+        <column name="id_destinacije"/>
+      </key-property>
+      <key-property name="idPrevoza" type="int">
+        <column name="id_prevoza"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="model.Destinacija" fetch="select" insert="false" name="destinacija" update="false">
+      <column name="id_destinacije" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="model.PrevoznoSredstvo" fetch="select" insert="false" name="prevoznoSredstvo" update="false">
+      <column name="id_prevoza" not-null="true"/>
+    </many-to-one>
+    <property name="cenaTransporta" type="double">
+      <column name="cena_transporta" not-null="true" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

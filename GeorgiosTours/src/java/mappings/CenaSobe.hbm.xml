@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 2, 2017 3:19:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="georgios_tours" name="model.CenaSobe" optimistic-lock="version" table="cena_sobe">
+    <composite-id class="model.CenaSobeId" name="id">
+      <key-property name="idHotela" type="int">
+        <column name="id_hotela"/>
+      </key-property>
+      <key-property name="idTipaSobe" type="int">
+        <column name="id_tipa_sobe"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="model.Hotel" fetch="select" insert="false" name="hotel" update="false">
+      <column name="id_hotela" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="model.TipSobe" fetch="select" insert="false" name="tipSobe" update="false">
+      <column name="id_tipa_sobe" not-null="true"/>
+    </many-to-one>
+    <property name="cenaPoNocenju" type="double">
+      <column name="cena_po_nocenju" not-null="true" precision="22" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

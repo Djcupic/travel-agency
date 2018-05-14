@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/georgios_tours</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="show_sql">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.connection.autocommit">true</property>
+    <mapping resource="mappings/PrevoznoSredstvo.hbm.xml"/>
+    <mapping resource="mappings/Hotel.hbm.xml"/>
+    <mapping resource="mappings/Putnik.hbm.xml"/>
+    <mapping resource="mappings/CenaSobe.hbm.xml"/>
+    <mapping resource="mappings/Aranzman.hbm.xml"/>
+    <mapping resource="mappings/Slika.hbm.xml"/>
+    <mapping resource="mappings/TipSobe.hbm.xml"/>
+    <mapping resource="mappings/Transport.hbm.xml"/>
+    <mapping resource="mappings/Soba.hbm.xml"/>
+    <mapping resource="mappings/Destinacija.hbm.xml"/>
+    <mapping resource="mappings/Drzava.hbm.xml"/>
+    <mapping resource="mappings/KreditnaKartica.hbm.xml"/>
+    <mapping resource="mappings/RezervisanaSoba.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

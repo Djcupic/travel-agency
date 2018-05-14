@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 2, 2017 3:19:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="georgios_tours" name="model.RezervisanaSoba" optimistic-lock="version" table="rezervisana_soba">
+    <composite-id class="model.RezervisanaSobaId" name="id">
+      <key-property name="idSobe" type="int">
+        <column name="id_sobe"/>
+      </key-property>
+      <key-property name="idRezervacije" type="int">
+        <column name="id_rezervacije"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="model.Aranzman" fetch="select" insert="false" name="aranzman" update="false">
+      <column name="id_rezervacije" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="model.Soba" fetch="select" insert="false" name="soba" update="false">
+      <column name="id_sobe" not-null="true"/>
+    </many-to-one>
+    <property name="pocetakRezervacije" type="string">
+      <column length="256" name="pocetak_rezervacije"/>
+    </property>
+    <property name="krajRezervacije" type="string">
+      <column length="256" name="kraj_rezervacije"/>
+    </property>
+  </class>
+</hibernate-mapping>

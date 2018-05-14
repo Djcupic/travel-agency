@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 2, 2017 3:19:43 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="georgios_tours" name="model.KreditnaKartica" optimistic-lock="version" table="kreditna_kartica">
+    <id name="brojKartice" type="string">
+      <column length="32" name="broj_kartice"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="tipKartice" type="string">
+      <column length="32" name="tip_kartice" not-null="true"/>
+    </property>
+    <property name="imeIPrezimeNaKartici" type="string">
+      <column length="256" name="ime_i_prezime_na_kartici" not-null="true"/>
+    </property>
+    <property name="datumIsteka" type="string">
+      <column length="32" name="datum_isteka" not-null="true"/>
+    </property>
+    <property name="cvc" type="string">
+      <column length="8" name="CVC" not-null="true"/>
+    </property>
+    <property name="stanjeNaKartici" type="double">
+      <column name="stanje_na_kartici" not-null="true" precision="22" scale="0"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="putniks" table="putnik">
+      <key>
+        <column length="32" name="broj_kartice" not-null="true"/>
+      </key>
+      <one-to-many class="model.Putnik"/>
+    </set>
+  </class>
+</hibernate-mapping>
